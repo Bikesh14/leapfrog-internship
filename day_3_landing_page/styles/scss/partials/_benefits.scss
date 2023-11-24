@@ -33,8 +33,9 @@
         transition: transform 0.2s ease-in-out;
         max-width: 304px;
 
+        //adding an animation effect to the card
         &:hover {
-            transform: translateY(-0.5rem);
+            transform: translateY(-2rem);
         }
         &-info {
             display: flex;

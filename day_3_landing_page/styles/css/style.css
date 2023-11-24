@@ -616,7 +616,7 @@ figure {
   max-width: 304px;
 }
 .benefits__card:hover {
-  transform: translateY(-0.5rem);
+  transform: translateY(-2rem);
 }
 .benefits__card-info {
   display: flex;
