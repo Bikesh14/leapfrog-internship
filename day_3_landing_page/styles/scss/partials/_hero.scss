@@ -1,0 +1,93 @@
+.hero {
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint-small) {
+        display: flex;
+        text-align: start;
+        justify-content: space-around;
+    }
+    
+    &__info{
+        max-width: 30rem;
+    }
+    &__title {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+        padding: $padding-medium 0;
+        margin: 0;
+
+        @media screen and (min-width: $breakpoint-small) {
+            font-size: $font-size-large;
+        }
+
+        @media screen and (min-width: $breakpoint-medium) {
+            font-size: $font-size-xlarge;
+        }
+    }
+
+    &__description {
+        font-size: $font-size-small;
+        color: $fade-white;
+        margin-bottom: $margin-large;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $gap-default;
+
+        @media screen and (min-width: $breakpoint-small) {
+            flex-direction: row;
+            justify-content: start;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $gap-default;
+        text-align: start;
+        // margin: 0;
+        margin-bottom: $margin-medium;
+
+        @media screen and (min-width: $breakpoint-small) {
+            justify-content: start;
+        }
+
+        &-value {
+            font-size: $font-size-medium;
+            font-weight: $font-weight-bold;
+            color: $white;
+            margin: $margin-xsmall;
+        }
+
+        &-title {
+            font-size: $font-size-small;
+            color: $fade-white;
+            margin: $margin-xsmall 0;
+        }
+    }
+
+    &__image {
+        // &-mobile {
+        //     // display: none;
+        // }
+
+        &-mastercard {
+            // transform: translate(min(-25%, -120px), min(-120%, -280px));
+            // transform: translate(0, 0);
+            transform: translate(-25%, -120%);
+            margin-bottom: -162px;
+
+            @media screen and (min-width: $breakpoint-small) {
+                transform: translate(30%, -230%);
+            }
+            @media screen and (min-width: $breakpoint-medium) {
+                transform: translate(50%, -230%);
+            }
+        }
+    }
+}

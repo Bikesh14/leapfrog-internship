@@ -1,0 +1,48 @@
+.promo {
+    padding: $padding-large 0;
+    &__image {
+        width: 100%;
+        height: auto;
+
+        @media screen and (min-width: $breakpoint-small) {
+            max-width: 80%;
+            padding: 10%;
+            margin-bottom: -285px; // 285px is the bottom section that is translated upward to create the overlap effect
+        }
+    }
+
+    &__info {
+        padding: $padding-medium;
+        background-color: $white;
+        color: $color-text-body;
+        border-radius: $border-radius;
+        box-shadow: 0 0 10px rgba($black, 0.1);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 20px rgba($black, 0.2);
+        }
+
+        @media screen and (min-width: $breakpoint-small) {
+            max-width: min(60%, 528px);
+            transform: translate(50%, 0%);
+        }
+
+        @media screen and (min-width: $breakpoint-medium) {
+            max-width: min(60%, 688px);
+            transform: translate(50%, -50%);
+        }
+    }
+
+    &__title {
+        line-height: 1.55;
+    }
+
+    &__download {
+        display: flex;
+        gap: $gap-medium;
+
+        list-style: none;
+        padding: 0;
+    }
+}

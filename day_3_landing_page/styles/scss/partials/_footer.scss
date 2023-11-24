@@ -1,0 +1,45 @@
+.footer {
+    padding: $padding-medium;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__grouped{
+        @media screen and (min-width: $breakpoint-medium) {
+            display: flex;
+            justify-content: space-between;
+            gap: 100px;
+          }
+    }
+
+ 
+    &__bottom {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: $gap-large;
+    }
+
+    &__link {
+        color: $color-text-body;
+        font-size: $font-size-small;
+        font-weight: $font-weight-regular;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__social {
+        width: 100%;
+        order: -1;
+        display: flex;
+        align-items: center;
+        gap: $gap-default;
+        margin: 0;
+    }
+}

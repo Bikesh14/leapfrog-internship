@@ -1,0 +1,11 @@
+
+@mixin backgroundSVGandColor($filepath, $color: $white) {
+    background-color: $color;
+    -webkit-mask-image: url($filepath);
+    mask: url($filepath);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}

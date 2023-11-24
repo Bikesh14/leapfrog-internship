@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    margin: 0;
+  }
+
+  &__nav {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-small) {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: $gap-large;
+    }
+  }
+
+  &__menu {
+    @media screen and (min-width: $breakpoint-small) {
+      display: none;
+    }
+
+    &-icon {
+      width: 2rem;
+      height: 2rem;
+      fill: $white;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+}
