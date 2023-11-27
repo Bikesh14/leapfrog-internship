@@ -1,0 +1,129 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-medium;
+    gap: $gap-default;
+    text-align: center;
+
+    padding-bottom: calc(114px + $padding-medium);
+    @media screen and (min-width: $breakpoint-medium) {
+        padding-bottom: calc(104px + $padding-medium);
+    }
+    @media screen and (min-width: $breakpoint-large) {
+        padding-bottom: calc(215px + $padding-medium);
+    }
+
+    @include e("header") {
+        display: flex;
+        flex-direction: column;
+        padding: $padding-medium;
+        gap: $gap-small;
+
+        * {
+            margin: 0;
+        }
+
+        @include m("title") {
+            @include text-defaults;
+            font-weight: $font-weight-extra-bold;
+            font-size: $font-size-medium;
+            color: $black;
+
+            @media screen and (min-width: $breakpoint-medium) {
+                font-size: $font-size-large;
+            }
+            @media screen and (min-width: $breakpoint-large) {
+                font-size: $font-size-xlarge;
+            }
+        }
+    }
+    @include e("description") {
+        @include text-defaults;
+        color: transparentize($black, 0.5);
+    }
+
+    @include e("cards") {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-medium;
+
+        @media screen and (min-width: $breakpoint-large) {
+            flex-direction: row;
+        }
+    }
+
+    @include e("card") {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-medium;
+        background-color: transparentize($bg-secondary, 0.5);
+        border-radius: $border-radius;
+        padding: $padding-default;
+        max-width: 305.6px;
+        margin: 0 auto;
+        position: relative;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            padding: $padding-medium;
+            max-width: 400px;
+        }
+        @media screen and (min-width: $breakpoint-large) {
+            gap: $gap-large;
+            max-width: unset;
+        }
+
+        @include m("bg-image") {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/vaccine-dose.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            align-self: center;
+            transform: scale(1.1) translateY(-15px);
+
+            @media screen and (min-width: $breakpoint-medium) {
+                transform: scale(1.1) translateY(-30px);
+            }
+            @media screen and (min-width: $breakpoint-large) {
+                transform: scale(1.5) translateY(-30px);
+            }
+        }
+
+        @include m("header") {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: $gap-small;
+            text-align: start;
+        }
+        @include m("name") {
+            @include text-defaults;
+            font-weight: $font-weight-bold;
+            color: $black;
+            margin: 0;
+        }
+        @include m("location") {
+            @include text-defaults;
+            font-size: 10px;
+            color: transparentize($black, 0.6);
+            margin: 0;
+
+            @media screen and (min-width: $breakpoint-medium) {
+                font-size: 14px;
+            }
+        }
+
+        @include m("activate")  {
+            background-color: $primary;
+            color: $white;
+
+            .feedback__card--name,
+            .feedback__card--location,
+            .text--primary {
+                color: $white;
+            }
+        }
+    }
+}

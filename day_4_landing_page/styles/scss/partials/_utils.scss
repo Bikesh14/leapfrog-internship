@@ -1,0 +1,40 @@
+.bg-primary {
+  background-color: $bg-primary;
+  color: $white;
+
+  a {
+    color: $secondary;
+
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+
+  input {
+    background-color: transparentize($bg-secondary, 0.9);
+  }
+}
+
+.bg-secondary {
+  background-color: $white;
+  color: $black;
+
+  @media screen and (min-width: $breakpoint-large) {
+    background-color: transparentize($color: $bg-secondary, $amount: 0.5);
+  }
+
+  a {
+    color: #00000080;
+
+    &:hover,
+    &:active {
+      color: transparentize($black, 0.6);
+    }
+  }
+
+  input {
+    border: none;
+    background-color: transparentize($bg-primary, 0.85);
+  }
+}

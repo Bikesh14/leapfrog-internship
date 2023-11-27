@@ -1,0 +1,56 @@
+.btn {
+  @include text-defaults;
+  font-weight: $font-weight-bold;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+
+  // default button -> medium sized
+  padding: $padding-default $padding-medium;
+
+  // large button
+  @include m("large") {
+    min-width: 150px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+      min-width: 250px;
+    }
+    @media screen and (min-width: $breakpoint-large) {
+      min-width: 350px;
+    }
+  }
+
+  // primary button
+  @include m("primary") {
+    background-color: $primary;
+    color: $white;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+
+  // secondary button
+  @include m("secondary") {
+    background-color: $bg-secondary-lighter;
+    color: $primary;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $bg-secondary;
+    }
+  }
+
+  // outlined button
+  @include m("outlined") {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $primary;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.hero {
+    display: flex;
+    gap: $gap-xlarge;
+    flex-direction: column;
+
+    @media screen and (min-width: $breakpoint-large) {
+        flex-direction: row;
+    }
+
+    @include e("info") {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-default;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            gap: $gap-large;
+        }
+        @media screen and (min-width: $breakpoint-large) {
+            gap: $gap-xlarge;
+            flex: 1;
+        }
+    }
+
+    @include e("catchyPhrase") {
+        @include text-defaults;
+        font-weight: $font-weight-bold;
+    }
+    
+    &__title,
+    a {
+        @include text-defaults;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-extra-bold;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            font-size: $font-size-large;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            font-size: $font-size-xlarge;
+        }
+    }
+    a {
+        color: $primary;
+    }
+
+    @include e("description") {
+        @include text-defaults;
+        color: $secondary;
+    }
+
+    @include e("clickable") {
+        display: flex;
+        flex-direction: row;
+        gap: $gap-default;
+    }
+
+    @include e("image") {
+        img {
+            width: 100%;
+        }
+    }
+}

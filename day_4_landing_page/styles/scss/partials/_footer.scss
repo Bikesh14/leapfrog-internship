@@ -1,0 +1,102 @@
+@use "sass:math";
+
+.footer {
+    @include container-defaults;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-medium;
+    padding-top: $padding-medium;
+    padding-bottom: $padding-medium;
+
+    @include e("backgroundImage") {
+        background-image: url("../img/footer-bg-image-small.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        // Adjustments for Get a quote section
+        margin-top: -114px;
+        background-position-y: 114px;
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-top: -104px;
+            background-position-y: 104px;
+            padding-bottom: $padding-large;
+            background-image: url("../img/footer-bg-image-medium.png");
+        }
+        @media screen and (min-width: $breakpoint-large) {
+            margin-top: -215px;
+            background-position-y: 215px;
+            padding-bottom: $padding-xlarge;
+            background-image: url("../img/footer-bg-image-large.png");
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding-top: $padding-large;
+        padding-bottom: $padding-large;
+    }
+    @media screen and (min-width: $breakpoint-large) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: $padding-xlarge;
+        padding-bottom: $padding-xlarge;
+    }
+
+    @include e("logo") {
+        @include text-defaults;
+        font-size: $font-size-normal;
+        font-weight: $font-weight-bold;
+        position: relative;
+
+        a {
+            color: $white;
+        }
+
+        .horizontal-line {
+            position: absolute;
+            bottom: -10px;
+            width: 100px;
+            border: 3px #17c2ec solid;
+            border-radius: $border-radius;
+
+            @media screen and (min-width: $breakpoint-large) {
+                bottom: -5px;
+            }
+        }
+    }
+    @include e("nav") {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-small;
+        @include resetListStyles;
+        @include text-defaults;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            flex-direction: row;
+            align-items: center;
+            gap: $gap-medium;
+        }
+    }
+    @include e("social") {
+        display: flex;
+        align-items: center;
+        gap: $gap-xsmall;
+        @include resetListStyles;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            gap: $gap-small;
+        }
+
+        @include m("icon") {
+            max-height: 18px;
+
+            @media screen and (min-width: $breakpoint-medium) {
+                max-height: 32px;
+            }
+            @media screen and (min-width: $breakpoint-large) {
+                max-height: 50px;
+            }
+        }
+    }
+}

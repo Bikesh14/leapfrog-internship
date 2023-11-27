@@ -1,0 +1,91 @@
+.check {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-default;
+    border-radius: $border-radius;
+    background-color: $bg-secondary-lightest;
+    margin-top: $margin-large;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-top: $margin-default;
+    }
+
+    @include e("header") {
+        padding: $padding-small;
+        background-color: $bg-secondary-lightest;
+        border-radius: $border-radius-small $border-radius-small 0 0;
+        text-align: center;
+
+        @media screen and (min-width: $breakpoint-large) {
+            padding: $padding-large;
+            text-align: left;
+        }
+    }
+
+    @include e("form") {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-default;
+        border-radius: $border-radius;
+        padding: $padding-small;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            padding: $padding-large;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            max-width: unset;
+            margin: unset;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            & > * {
+                flex: 1;
+            }
+        }
+
+        input {
+            background-color: transparent;
+            color: $white;
+            border: 3px solid $secondary;
+            border-radius: $border-radius-small;
+            padding: $padding-default;
+
+            &::placeholder {
+                color: $secondary;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $primary;
+            }
+        }
+
+        button {
+            max-width: max-content;
+            border: 3px solid $primary;
+            border-radius: $border-radius-small;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        @include m("submit") {
+            color: $primary;
+        }
+    }
+
+    @include e("footer") {
+        background-color: $bg-secondary-lightest;
+        border-radius: $border-radius-small;
+        padding: $padding-default;
+        text-align: center;
+        color: $primary !important; 
+        margin: 0 $padding-small;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin: 0 $padding-large;
+        }
+    }
+}
