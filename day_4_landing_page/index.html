@@ -8,13 +8,16 @@
 </head>
 
 <body class="bg-primary">
-  <!-- Header -->
   <nav class="container header">
-    <a href="#" class="header__logo" title="logo">
-      Vaccination.ng
-    </a>
-
-    <!-- navigation -->
+   
+    <div class="header__logo">
+      <a href="#" class="header__logo--link" title="logo">
+        Vaccination.ng
+      </a>
+      <div class="horizontal-line"></div>
+    </div>
+    
+    <div class="horizontal-line"></div>
     <ul class="header__nav">
       <li>
         <a href="#" class="header__nav--link active" title="Home">Home</a>
@@ -75,7 +78,7 @@
     </div>
   </section>
 
-  <!-- Schedule form -->
+  <!-- Schedule your vaccination -->
   <section>
     <div class="container schedule">
       <div class="schedule__title">
@@ -129,6 +132,7 @@
         <button class="btn btn--primary schedule__form--submit">Submit</button>
       </form>
     </div>
+    
     <div class="bg-secondary">
       <div class="container schedule__image">
         <figure>
@@ -233,7 +237,7 @@
     <div class="verify__body">
       <div class="verify__right">
         <figure class="verify__image">
-          <img src="./assets/img/vaccine-image.svg" alt="vaccine image" />
+          <img src="./assets/img/vaccine-image.svg" alt="vaccine image" width="100%" />
         </figure>
         <p class="verify__image--overlayText">COVID-19<br /> Vaccine</p>
         <button class="btn btn--secondary verify__image--overlayButton">Verify Status</button>
@@ -271,12 +275,8 @@
     </div>
   </section>
 
-
   <!-- Prevention and symptoms-->
   <section class="prevention">
-    <figure class="prevention__image">
-      <img src="./assets/img/Symptoms.svg" alt="Symptoms image" />
-    </figure>
     <div class="prevention__header">
       <p class="text">Covid-19 Prevention</p>
       <h2><span class="text--primary">COVID-19</span> Symptoms</h2>
@@ -284,6 +284,9 @@
         Mi
         vestibulum, ullamcorper venenatis imperdiet augue arcu donec neque.</p>
     </div>
+    <figure class="prevention__image">
+      <img src="./assets/img/Symptoms1.png" alt="Symptoms image" />
+    </figure>
 
     <div class="prevention__body">
       <ul class="prevention__body--left">
@@ -404,7 +407,6 @@
 
   <!-- Footer -->
   <footer class="footer__backgroundImage">
-    <!-- Get a quote -->
     <section class="container quote">
       <div class="quote__border">
         <div class="quote__container">

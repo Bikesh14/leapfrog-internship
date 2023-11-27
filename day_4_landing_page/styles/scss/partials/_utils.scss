@@ -17,12 +17,8 @@
 }
 
 .bg-secondary {
-  background-color: $white;
+  background: $white;
   color: $black;
-
-  @media screen and (min-width: $breakpoint-large) {
-    background-color: transparentize($color: $bg-secondary, $amount: 0.5);
-  }
 
   a {
     color: #00000080;

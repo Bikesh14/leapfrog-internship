@@ -2,17 +2,19 @@
     position: relative;
     width: 100%;
     @include e("image") {
+        max-width: 223px;
+        margin: 0 auto;
+        @media screen and (min-width: $breakpoint-medium) {
+            max-width: 458px;
+        }
+        @media screen and (min-width: $breakpoint-large) {
+            max-height: 708px;
+        }
         img {
             width: 100%;
-            max-height: 346px;
+            // max-height: 100px;
             object-fit: cover;
 
-            @media screen and (min-width: $breakpoint-medium) {
-                max-height: 650px;
-            }
-            @media screen and (min-width: $breakpoint-large) {
-                max-height: 981px;
-            }
         }
     }
     @include e("header") {
@@ -22,16 +24,19 @@
         max-width: 60%;
         margin: 0 auto;
         text-align: center;
-        position: absolute;
-        top: 25px;
-        left: 25%;
+        padding-top: 25px;
+        padding-bottom: 30px;
 
         @media screen and (min-width: $breakpoint-medium) {
             top: 40px;
+            padding-top: 40px;
+            padding-bottom: 60px;
         }
         @media screen and (min-width: $breakpoint-large) {
             gap: $gap-default;
             top: 67px;
+            padding-top: 67px;
+            padding-bottom: 179px;
         }
 
         h2 {
@@ -71,16 +76,55 @@
             }
 
             .left:nth-child(1) {
-                left: 35%;
+                left: 16%;
+                bottom: 60%;
+            }
+            .left:nth-child(2) {
+                left: 8%;
+                bottom: 35%;
+            }
+            .left:nth-child(3) {
+                left: 0;
+                bottom: 10%;
+            }
+        
+            @media screen and (min-width: $breakpoint-medium) {
+                
+            .left {
+                position: absolute;
+            }
+
+            .left:nth-child(1) {
+                left: 16%;
                 bottom: 80%;
             }
             .left:nth-child(2) {
-                left: 20%;
+                left: 8%;
                 bottom: 45%;
             }
             .left:nth-child(3) {
                 left: 0;
                 bottom: 10%;
+            }
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                .left {
+                    position: absolute;
+                }
+    
+                .left:nth-child(1) {
+                    left: 26%;
+                    bottom: 70%;
+                }
+                .left:nth-child(2) {
+                    left: 14%;
+                    bottom: 40%;
+                }
+                .left:nth-child(3) {
+                    left: 0;
+                    bottom: 10%;
+                }
             }
         }
         @include m("right") {
@@ -92,17 +136,57 @@
             }
 
             .right:nth-child(1) {
-                right: 20%;
+                right: 30%;
+                bottom: 60%;
+            }
+            .right:nth-child(2) {
+                right: 8%;
+                bottom: 35%;
+            }
+            .right:nth-child(3) {
+                right: 4%;
+                bottom: 10%;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                
+            .right {
+                position: absolute;
+            }
+
+            .right:nth-child(1) {
+                right: 30%;
                 bottom: 80%;
             }
             .right:nth-child(2) {
-                right: 1%;
+                right: 8%;
                 bottom: 45%;
             }
             .right:nth-child(3) {
-                right: 0;
+                right: 4%;
                 bottom: 10%;
             }
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                .right {
+                    position: absolute;
+                }
+    
+                .right:nth-child(1) {
+                    right: 30%;
+                    bottom: 68%;
+                }
+                .right:nth-child(2) {
+                    right: 8%;
+                    bottom: 38%;
+                }
+                .right:nth-child(3) {
+                    right: 4%;
+                    bottom: 10%;
+                }
+            }
+
         }
 
         @include m("item") {

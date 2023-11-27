@@ -9,14 +9,39 @@
     margin-bottom: $margin-medium;
   }
 
+  // @include e("logo") {
+  //   margin: 0;
+
+  //   font-size: $font-size-large;
+  //   font-weight: $font-weight-bold;
+  //   color: $white !important;
+    
+
+  // }
   @include e("logo") {
-    margin: 0;
-
-    font-size: $font-size-large;
+    font-size:$font-size-large;;
     font-weight: $font-weight-bold;
-    color: $white !important;
+    position: relative;
+    color: $white ;
 
-  }
+    a {
+        color: $white;
+        font-weight: $font-weight-bold;
+
+    }
+
+    .horizontal-line {
+        position: absolute;
+        bottom: -10px;
+        width: 100px;
+        border: 3px #17c2ec solid;
+        border-radius: $border-radius;
+
+        @media screen and (min-width: $breakpoint-large) {
+            bottom: -5px;
+        }
+    }
+}
 
   @include e("nav") {
     display: none;

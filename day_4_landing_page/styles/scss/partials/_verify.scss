@@ -12,7 +12,7 @@
     @include e("body") {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         gap: $gap-default;
 
         @media screen and (min-width: $breakpoint-medium) {
@@ -27,12 +27,15 @@
 
     @include e("right") {
         position: relative;
+        max-width: 289px;
+        min-height: 418px;
 
         @media screen and (min-width: $breakpoint-large) {
             order: 1;
         }
     }
     @include e("image") {
+        width: 100%;
         @include m("overlayText") {
             @include text-defaults;
             position: absolute;
@@ -64,10 +67,7 @@
         }
     }
 
-    // @include e("right") {
-    //     width: 100%;
-    // }
-
+  
     @include e("left") {
         display: flex;
         flex-direction: column;
