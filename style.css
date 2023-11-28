@@ -1,0 +1,35 @@
+
+body {
+    margin: 4%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.17rem;
+
+}
+.table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.cell {
+    padding: 6px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.button:hover {
+    background-color: #45a049; 
+}
+
+.github-button {
+    background-color: #008CBA;
+}
+.github-button:hover {
+    background-color: #007AA3;
+}
