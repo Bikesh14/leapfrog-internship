@@ -1,0 +1,4 @@
+const BALL_COUNT = 100;
+
+const BALL_WIDTH = 20;
+const BALL_RADIUS = BALL_WIDTH / 2;

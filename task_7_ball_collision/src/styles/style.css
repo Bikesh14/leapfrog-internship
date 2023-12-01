@@ -1,0 +1,19 @@
+:root {
+    --margin: 10px;
+}
+
+
+.viewport {
+    height: 100vh;
+    width: 80vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 50%;
+}
