@@ -24,7 +24,8 @@ body {
     font-size: 1rem;
 }
 .button:hover {
-    background-color: #45a049; 
+    background-color: #45a049;
+    cursor: pointer;
 }
 
 .github-button {
