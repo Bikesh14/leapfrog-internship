@@ -64,14 +64,14 @@ function update() {
   updateScore();
   context.fillStyle = "black";
   context.font = "24px sans-serif";
-  context.fillText(score, 10, 40);
+  context.fillText('Your Score: '+score, 10, 40);
 
   if (gameOver) {
     context.fillStyle="red"
-    context.font = "18px sans-serif";
+    context.font = "24px sans-serif";
     context.fillText(
       "Game Over: Press 'Space' to Restart",
-      boardWidth / 4,
+      boardWidth / 6,
       boardHeight/2
     );
   }
