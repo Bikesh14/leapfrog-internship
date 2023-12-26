@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <script type="module" crossorigin src="./assets/index-x1LzseSC.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-uxiOjip4.css">
+  </head>
+
+  <body>
+    <nav class="container">
+      <div id="logo">
+        <img src="./assets/todo-faOJ0kNa.png" alt="Logo" style="max-width: 60px" />
+      </div>
+      <div class="filter-todos">
+        <select id="filterDropdown">
+          <option value="all">All</option>
+          <option value="unfinished">Pending</option>
+          <option value="finished">Completed</option>
+        </select>
+      </div>
+    </nav>
+
+    <div class="todo-container">
+      <div class="header">
+        <h1 id="title">Todo List</h1>
+      </div>
+      <div class="content">
+        <div class="form-wrapper">
+          <div class="search-wrapper">
+            <h3>Search Tasks</h3>
+            <form class="form-style">
+              <input
+                type="text"
+                placeholder="Search tasks"
+                class="search-todos"
+              />
+
+              <button type="submit" class="btn-search">Search</button>
+            </form>
+          </div>
+
+          <div class="add-todo-wrapper">
+            <h3>Add New Task</h3>
+            <form class="form-style form-style-space">
+              <input
+                type="text"
+                placeholder="Add task title"
+                class="add-todo-title"
+              />
+
+              <textarea
+                rows="3"
+                placeholder="Add description"
+                class="add-todo-desc"
+              ></textarea>
+              <div style="display: flex; align-items: end">
+                <button type="submit">Add Task</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="todos-wrapper">
+          <!-- Todo items will be added dynamically here -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
