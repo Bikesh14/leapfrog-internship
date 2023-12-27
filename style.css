@@ -107,6 +107,10 @@ table td:last-child {
   white-space: nowrap;
 }
 
+.btn-unavailable {
+  background-color: rgb(232, 230, 230);
+  color: #ffffff;
+}
 .btn-orange {
   background-color: #fbe9e7;
   color: #d84315;
